@@ -6,5 +6,25 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `Ha Huy Long Hai - Blog`,
+    author: `Ha Huy Long Hai`,
+  },
+  plugins: [
+    "gatsby-plugin-catch-links",
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/blogPosts`,
+        name: "blogPosts",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.md`, `.mdx`],
+      },
+    },
+  ],
 }
