@@ -24,13 +24,21 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.md`, `.mdx`],
+        plugins: [
+          `gatsby-remark-images-medium-zoom`, // Important!
+        ],
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 600,
               quality: 80,
+              linkImagesToOriginal: false,
             },
+          },
+          {
+            resolve: `gatsby-remark-images-medium-zoom`, // Important!
+            options: {},
           },
         ],
       },
