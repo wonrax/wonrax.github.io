@@ -2,8 +2,14 @@
 slug: "/blog/hello-world"
 date: 2021-02-25T23:18:00+07:00
 title: "Why Angular is getting the highest preference among developers?"
----
-Et id eum voluptas iste qui laudantium. Accusantium qui id voluptatem voluptas officia tempore ipsam deleniti rem. Est est occaecati voluptatem exercitationem ex possimus quo minima. Sit architecto est harum aut nemo perferendis reiciendis odio. 
-# 1. Title 1
-Start content of title 1.
+excerpt: "Et id eum voluptas iste qui laudantium. Accusantium qui id voluptatem voluptas officia tempore ipsam deleniti rem. Est est occaecati voluptatem exercitationem ex possimus quo minima. Sit architecto est harum aut nemo perferendis reiciendis odio."
+--- 
+Giả sử bánh mì chuyển ngữ có thật, liệu khoảnh khắc cắn nó vào và hiểu toàn bộ câu chuyện có kỳ diệu như một khoảnh khắc “wow, hay chỉ thấy hình ảnh kỳ lạ về những người râu quai [title](https://www.example.com) nón đội nón vải đang nói thứ ngôn ngữ của mình?
+
 ![Sample image](./windows.jpg "Philadelphia's Magic Gardens")
+
+Thực ra việc thông thạo ngôn ngữ nước ngoài không giống gì so với cả hai kịch bản vừa được gợi ra. Khi thông thạo ngôn ngữ thứ hai, não chúng ta sẽ không hoạt động giống Google Dịch (tức không có quá trình dịch qua ngôn ngữ mẹ đẻ để hiểu), cũng không thực sự cảm nhận được sự khác biệt như thể bước vào thế giới khác. Nó chỉ giống việc bạn đã học tiếng Anh trong một thời gian dài một cách nghiêm túc, rồi một buổi sáng bật YouTube xem kênh tiếng Anh nào đó và hiểu họ mà không cần quá nhiều nỗ lực.
+
+Việc hiểu ngôn ngữ thứ hai không giúp đem lại cảm giác bước vào thế giới khác, lý do rất đơn giản, vì chúng ta vẫn đang ở trong thế giới cũ cùng những người khác như trước nay vẫn vậy (dù cho có dùng ngôn ngữ mẹ đẻ khác nhau đi chăng nữa). Ngôn ngữ chỉ là một công cụ, một hệ thống quy ước để truyền đi suy nghĩ, thông điệp và những thông tin dạng như thế, không phải một lớp màng ngăn cách giữa thế giới tinh thần này với thế giới tinh thần kia, lại càng không phải thứ định hình toàn bộ thế giới tinh thần ấy. Do vậy, cú sốc sẽ chỉ đến từ sự đối nghịch trong văn hóa, quan điểm và hàng loạt mâu thuẫn sơ cấp khác - thứ vốn vẫn tồn tại ở những người có cùng chung ngôn ngữ và chỉ xuất hiện phổ biến ở những người khác ngôn ngữ do nền tảng văn hóa của họ cũng khác nhau (chỉ là một vài vấn đề liên quan đến thống kê).
+
+Do vậy, trong bối cảnh văn hóa thế giới bắt đầu có xu hướng giao thoa và được tiếp thu lẫn nhau kể từ sau Thế chiến II, ngôn ngữ dần thể hiện rõ vai trò như một công cụ và mờ nhạt trong tác động của nó lên cách con người nhìn nhận thế giới như phía tất định ngôn ngữ đã kết luận từ trước đó (xem thêm ở bài viết đính kèm ở link số [1] để hiểu rõ hơn về vấn đề này). Về sau người ta đã nhận ra sự nghiêm chỉnh và căng thẳng trong các mối quan hệ xã hội của Nhật Bản chủ yếu do ý thức hệ, lịch sử, văn hóa, chính trị… thay vì do họ nói tiếng Nhật. Các hậu tố như “-san”, “-chan” hay các kính ngữ “senpai”, “kohai”, “sensei”... dùng trong giao tiếp câu nệ vai vế được tạo ra bởi văn hóa Nhật Bản thay vì ngược lại. Tức không có chuyện việc dùng từ ngữ khiến tạo ra văn hóa thứ bậc. Cụ thể, văn hóa dùng kính ngữ “sensei”, “kohai”, “senpai” cụ thể xuất phát từ việc giảng dạy lý thuyết Nho giáo, văn hóa gia đình truyền thống Nhật Bản hay thậm chí đã được luật hóa trong Luật Dân sự Nhật Bản năm 1898 [2].

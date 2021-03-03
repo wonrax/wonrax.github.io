@@ -3,7 +3,7 @@
     width: 600px;
 }
 
-@media only screen and (max-width: 616px) {
+@media only screen and (max-width: 632px) {
     .reading {
         padding: 0 16px;
         width: auto;

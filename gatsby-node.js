@@ -43,8 +43,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `)
 
-  console.log(result.data.allMdx.edges[0])
-
   if (result.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }

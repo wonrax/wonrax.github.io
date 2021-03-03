@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Container, Reading, Heading } from "../components"
+import { Container, Reading, Heading, Paragraph, Caption } from "../components"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { shortcodes } from "../utils/shortcodes"
@@ -12,7 +12,12 @@ export default function Template({
     <Container>
       <Reading>
         <Heading weight={3}>{mdx.frontmatter.title}</Heading>
-        <Heading weight={6}>{mdx.frontmatter.date}</Heading>
+        <Paragraph lh={"lh150"} color={"textColorSecondary"}>
+          {mdx.frontmatter.excerpt}
+        </Paragraph>
+        <Caption
+          color={"primary-color"}
+        >{`Published ${mdx.frontmatter.date}`}</Caption>
         <MDXProvider components={shortcodes}>
           <MDXRenderer className="blog-post-content">{mdx.body}</MDXRenderer>
         </MDXProvider>
@@ -29,6 +34,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        excerpt
       }
     }
   }
