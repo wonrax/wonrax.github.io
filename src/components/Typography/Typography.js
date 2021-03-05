@@ -26,7 +26,7 @@ class Heading extends React.Component {
 class Paragraph extends React.Component {
   render() {
     const classnames = `${this.props.mb || "mb-16"} ${this.props.color || ""} ${
-      this.props.lh ? typographyStyles[this.props.lh] : ""
+      this.props.lh ? typographyStyles[this.props.lh] : typographyStyles.lh170
     }`
     return <p className={classnames}>{this.props.children}</p>
   }
@@ -39,6 +39,12 @@ class Caption extends React.Component {
         {this.props.children}
       </p>
     )
+  }
+}
+
+class Link extends React.Component {
+  render() {
+    return
   }
 }
 

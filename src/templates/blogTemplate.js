@@ -12,7 +12,7 @@ export default function Template({
     <Container>
       <Reading>
         <Heading weight={3}>{mdx.frontmatter.title}</Heading>
-        <Paragraph lh={"lh150"} color={"textColorSecondary"}>
+        <Paragraph lh={"lh170"} color={"textColorSecondary"}>
           {mdx.frontmatter.excerpt}
         </Paragraph>
         <Caption

@@ -1,26 +1,28 @@
 .navbar {
     height: var(--nav-height);
     line-height: var(--nav-height);
-    -webkit-transition: all 0.35s ease;
+    /* -webkit-transition: all 0.35s ease;
     -moz-transition: all 0.35s ease;
-    -o-transition: all 0.35s ease;
-    transition: all 0.35s ease;
+    -o-transition: all 0.35s ease; */
+    transition: height 0.35s ease, line-height 0.35s ease;
     background-color: white;
 }
 
 .navbarShrink {
     height: var(--nav-height-shrink);
     line-height: var(--nav-height-shrink);
-    -webkit-transition: all 0.35s ease;
+    /* -webkit-transition: all 0.35s ease;
     -moz-transition: all 0.35s ease;
-    -o-transition: all 0.35s ease;
-    transition: all 0.35s ease;
+    -o-transition: all 0.35s ease; */
     background-color: white;
     /* border-bottom: 2px solid var(--primary-color); */
-    /* box-shadow: 0 2px 1px rgba(0,0,0,0.1); */
-    border-bottom: 1px solid;
+    
+    box-shadow: 0 2px 4px rgba(0,0,0,0.075);
+    
+    /* border-bottom: 1px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient(to right, #bbbbbb, #dddddd);
+    border-image-source: linear-gradient(to right, #bbbbbb, #dddddd); */
+    transition: height 0.35s ease, line-height 0.35s ease;
 }
 
 .wrapper {

@@ -9,5 +9,5 @@ export const shortcodes = {
   h4: props => <Heading weight={6}>{props.children}</Heading>,
   h5: props => <Heading weight={6}>{props.children}</Heading>,
   h6: props => <Heading weight={6}>{props.children}</Heading>,
-  p: props => <Paragraph lh={"lh150"}>{props.children}</Paragraph>,
+  p: props => <Paragraph lh={"lh170"}>{props.children}</Paragraph>,
 }
