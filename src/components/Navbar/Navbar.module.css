@@ -5,7 +5,7 @@
     -moz-transition: all 0.35s ease;
     -o-transition: all 0.35s ease; */
     transition: height 0.35s ease, line-height 0.35s ease;
-    background-color: white;
+    background-color: var(--background-color);
 }
 
 .navbarShrink {
@@ -14,7 +14,7 @@
     /* -webkit-transition: all 0.35s ease;
     -moz-transition: all 0.35s ease;
     -o-transition: all 0.35s ease; */
-    background-color: white;
+    background-color: var(--background-color);
     /* border-bottom: 2px solid var(--primary-color); */
     
     box-shadow: 0 2px 4px rgba(0,0,0,0.075);

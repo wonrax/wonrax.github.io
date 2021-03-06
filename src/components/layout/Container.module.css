@@ -69,14 +69,20 @@ a {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: var(--text-color);
+    background-color: var(--background-color);
     --primary-color: #0038FF;
     --nav-height: 128px;
     --nav-height-shrink: 48px;
 }
 
-.theme_light {
-    --text-color: #111111;
-    --text-secondary-color: #808080;
+.themeLight {
+    composes: themeLight from "../Colors/Colors.module.css";
+    transition: all 0.2s linear;
+}
+
+.themeDark {
+    composes: themeDark from "../Colors/Colors.module.css";
+    transition: all 0.2s linear;
 }
 
 h1 {
@@ -117,9 +123,13 @@ h5 {
 }
 
 .content {
-    position: relative;
+    padding-top: var(--nav-height);
+    /* position: relative;
+    height: 100%;
+    margin: 0 auto;
     min-height: calc(100vh - var(--nav-height));
     top: var(--nav-height);
+    background-color: var(--background-color); */
 }
 
 :global .mb-16 {

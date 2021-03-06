@@ -1,0 +1,11 @@
+.themeLight {
+    --text-color: #111111;
+    --text-secondary-color: #808080;
+    --background-color: white;
+}
+
+.themeDark {
+    --text-color: #EEEEEE;
+    --text-secondary-color: #808080;
+    --background-color: black;
+}

@@ -44,6 +44,14 @@ class Navbar extends React.Component {
               <li className={navbarStyles.menuItem}>
                 <a href="#">about</a>
               </li>
+              <li className={navbarStyles.menuItem}>
+                <a
+                  style={{ cursor: "pointer" }}
+                  onClick={this.props.themeToggle}
+                >
+                  toggleTheme
+                </a>
+              </li>
             </ul>
           </div>
         </div>

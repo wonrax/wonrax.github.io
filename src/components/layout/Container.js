@@ -1,14 +1,21 @@
-import React from "react"
+import React, { useState } from "react"
 import containerStyles from "./Container.module.css"
 import { Navbar } from "../Navbar"
 
 const Container = props => {
+  const [darkModeOn, setDarkModeOn] = useState(true)
+  const handleThemeToggle = function (event) {
+    // event.preventDefault()
+    setDarkModeOn(!darkModeOn)
+  }
   return (
     <div
-      className={`container ${containerStyles.container} ${containerStyles.theme_light}`}
+      className={`container ${containerStyles.container} ${
+        darkModeOn ? containerStyles.themeDark : containerStyles.themeLight
+      }`}
     >
       <div className={containerStyles.navBar}>
-        <Navbar></Navbar>
+        <Navbar themeToggle={handleThemeToggle}></Navbar>
       </div>
       <div className={containerStyles.content}>{props.children}</div>
     </div>
