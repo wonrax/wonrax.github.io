@@ -1,5 +1,5 @@
 import React from "react"
-import { Heading, Paragraph } from "../components/Typography/Typography"
+import { Heading, Paragraph } from "../components/Typography"
 
 // Convert markdown tags to components
 export const shortcodes = {

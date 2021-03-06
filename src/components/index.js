@@ -1,3 +1,3 @@
-export * from "./Typography/Typography"
-export * from "./layout/Container/Container"
-export * from "./layout/Reading/Reading"
+export * from "./Typography"
+export * from "./layout/Container"
+export * from "./layout/Reading"

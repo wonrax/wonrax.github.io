@@ -1,5 +1,5 @@
 import React from "react"
-import { Heading } from "../Typography/Typography"
+import { Heading } from "../Typography"
 import navbarStyles from "./Navbar.module.css"
 
 class Navbar extends React.Component {

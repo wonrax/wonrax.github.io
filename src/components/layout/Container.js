@@ -1,6 +1,6 @@
 import React from "react"
 import containerStyles from "./Container.module.css"
-import { Navbar } from "../../Navbar/Navbar"
+import { Navbar } from "../Navbar"
 
 const Container = props => {
   return (
