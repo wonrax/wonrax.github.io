@@ -1,6 +1,7 @@
 import React from "react"
 import { Heading } from "../Typography"
 import navbarStyles from "./Navbar.module.css"
+import MenuIcon from "../Icons/Menu.svg"
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -38,19 +39,39 @@ class Navbar extends React.Component {
           </div>
           <div>
             <ul>
-              <li className={navbarStyles.menuItem}>
+              <li
+                className={`${navbarStyles.menuItem} ${navbarStyles.desktop}`}
+              >
                 <a href="#">blog</a>
               </li>
-              <li className={navbarStyles.menuItem}>
+              <li
+                className={`${navbarStyles.menuItem} ${navbarStyles.desktop}`}
+              >
                 <a href="#">about</a>
               </li>
-              <li className={navbarStyles.menuItem}>
+              <li
+                className={`${navbarStyles.menuItem} ${navbarStyles.desktop}`}
+              >
                 <a
                   style={{ cursor: "pointer" }}
                   onClick={this.props.themeToggle}
                 >
                   toggleTheme
                 </a>
+              </li>
+              <li className={(navbarStyles.menuItem, navbarStyles.mobile)}>
+                <img
+                  style={{
+                    cursor: "pointer",
+                    position: "relative",
+                    top: "5px",
+                  }}
+                  onClick={this.props.themeToggle}
+                  src={MenuIcon}
+                  height={"24"}
+                  width={"24"}
+                  alt={"Open menu"}
+                ></img>
               </li>
             </ul>
           </div>

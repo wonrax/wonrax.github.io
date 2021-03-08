@@ -3,7 +3,7 @@ import containerStyles from "./Container.module.css"
 import { Navbar } from "../Navbar"
 
 const Container = props => {
-  const [darkModeOn, setDarkModeOn] = useState(true)
+  const [darkModeOn, setDarkModeOn] = useState(false)
   const handleThemeToggle = function (event) {
     // event.preventDefault()
     setDarkModeOn(!darkModeOn)

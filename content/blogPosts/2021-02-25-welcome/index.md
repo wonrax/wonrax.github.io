@@ -4,9 +4,9 @@ date: 2021-02-25T23:18:00+07:00
 title: "Why Angular is getting the highest preference among developers?"
 excerpt: "Et id eum voluptas iste qui laudantium. Accusantium qui id voluptatem voluptas officia tempore ipsam deleniti rem. Est est occaecati voluptatem exercitationem ex possimus quo minima. Sit architecto est harum aut nemo perferendis reiciendis odio."
 --- 
-Giả sử bánh mì chuyển ngữ có thật, liệu khoảnh khắc cắn nó vào và hiểu toàn bộ câu chuyện có kỳ diệu như một khoảnh khắc “wow, hay chỉ thấy hình ảnh kỳ lạ về những người râu quai [title](https://www.example.com) nón đội nón vải đang nói thứ ngôn ngữ của mình?
+Morbi quis turpis eu mauris ultricies convallis vel venenatis risus. Maecenas posuere pretium ex quis ullamcorper. Ut ultricies ac ligula ac vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra urna sapien, sit amet gravida ligula pharetra nec. Suspendisse sit amet aliquet felis.
 
-![Sample image](https://source.unsplash.com/600x0 "Sample image alt")
+![Sample image](./windows.jpg)
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis volutpat faucibus. Morbi dignissim varius magna, vitae egestas velit maximus quis. Morbi nisl dui, rutrum sollicitudin dictum sed, fermentum a arcu. Vivamus luctus fringilla est, id consectetur nunc sodales et. Ut ante velit, auctor sed accumsan in, iaculis eget augue. Cras id suscipit ante. Pellentesque commodo nisl id ligula viverra, at lacinia augue dapibus. Donec molestie ac nunc ut pretium. Sed id dolor massa. Phasellus sit amet suscipit lacus, porttitor finibus metus. Maecenas commodo faucibus orci eu feugiat. In cursus velit eu lorem vehicula semper. Integer finibus, nisi a aliquam porta, massa enim aliquam ante, eget molestie lacus magna quis eros. Aenean elementum nulla ut turpis gravida, et tempor metus sollicitudin.
 

@@ -32,7 +32,7 @@ module.exports = {
               maxWidth: 600,
               quality: 80,
               linkImagesToOriginal: true,
-              markdownCaptions: true,
+              showCaptions: true,
             },
           },
         ],
