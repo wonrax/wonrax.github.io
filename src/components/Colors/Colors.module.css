@@ -3,6 +3,8 @@
     --text-secondary-color: #808080;
     --background-color: white;
     --background-secondary-color: #EEEEEE;
+    --primary-tint-color: #eff2ff;
+    --primary-tinter-color: #5c7fff;
 }
 
 .themeDark {
@@ -10,4 +12,6 @@
     --text-secondary-color: #808080;
     --background-color: black;
     --background-secondary-color: #111111;
+    --primary-tint-color: #00071d;
+    --primary-tinter-color: #002092;
 }

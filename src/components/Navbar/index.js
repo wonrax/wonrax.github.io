@@ -33,21 +33,28 @@ class Navbar extends React.Component {
       >
         <div className={navbarStyles["wrapper"]}>
           <div>
-            <Heading weight={5} mb={"none"}>
+            <a
+              href={"/"}
+              style={{ color: "var(--primary-color)", fontWeight: "bold" }}
+            >
               hà huy long hải
-            </Heading>
+            </a>
           </div>
           <div>
             <ul>
               <li
                 className={`${navbarStyles.menuItem} ${navbarStyles.desktop}`}
               >
-                <a href="#">blog</a>
+                <a className={`${navbarStyles.menuItemCurrent}`} href="#">
+                  blog
+                </a>
               </li>
               <li
                 className={`${navbarStyles.menuItem} ${navbarStyles.desktop}`}
               >
-                <a href="#">about</a>
+                <a className={`${navbarStyles.menuItemSecondary}`} href="#">
+                  about
+                </a>
               </li>
               <li
                 className={`${navbarStyles.menuItem} ${navbarStyles.desktop}`}
@@ -55,6 +62,7 @@ class Navbar extends React.Component {
                 <a
                   style={{ cursor: "pointer" }}
                   onClick={this.props.themeToggle}
+                  className={`${navbarStyles.menuItemSecondary}`}
                 >
                   toggleTheme
                 </a>
