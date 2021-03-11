@@ -35,7 +35,7 @@ class Navbar extends React.Component {
           <div>
             <a
               href={"/"}
-              style={{ color: "var(--primary-color)", fontWeight: "bold" }}
+              style={{ color: "var(--text-color)", fontWeight: "600" }}
             >
               hà huy long hải
             </a>

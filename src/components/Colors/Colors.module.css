@@ -1,17 +1,20 @@
 .themeLight {
     --text-color: #111111;
+    --text-color-tinted: #000a30;
     --text-secondary-color: #808080;
     --background-color: white;
+    --nav-background-color: #fffffffa;
     --background-secondary-color: #EEEEEE;
     --primary-tint-color: #eff2ff;
-    --primary-tinter-color: #5c7fff;
+    --primary-tinter-color: #8ea6ff;
 }
 
 .themeDark {
     --text-color: #EEEEEE;
     --text-secondary-color: #808080;
     --background-color: black;
+    --nav-background-color: #181818f8;
     --background-secondary-color: #111111;
-    --primary-tint-color: #00071d;
-    --primary-tinter-color: #002092;
+    --primary-tint-color: #000822;
+    --primary-tinter-color: #0026ad;
 }

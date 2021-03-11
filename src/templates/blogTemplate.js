@@ -11,7 +11,9 @@ export default function Template({
   return (
     <Container>
       <Reading>
-        <Heading weight={3}>{mdx.frontmatter.title}</Heading>
+        <Heading style={{ color: "var(--text-color-tinted)" }} weight={3}>
+          {mdx.frontmatter.title}
+        </Heading>
         <Paragraph lh={"lh170"} color={"textColorSecondary"}>
           {mdx.frontmatter.excerpt}
         </Paragraph>

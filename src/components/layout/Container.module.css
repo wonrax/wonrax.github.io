@@ -70,7 +70,7 @@ a {
     -moz-osx-font-smoothing: grayscale;
     color: var(--text-color);
     background-color: var(--background-color);
-    --primary-color: #0038FF;
+    --primary-color: #0066ff;
     --nav-height: 128px;
     --nav-height-shrink: 48px;
 }
