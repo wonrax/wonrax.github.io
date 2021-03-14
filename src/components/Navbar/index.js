@@ -32,56 +32,49 @@ class Navbar extends React.Component {
         }
       >
         <div className={navbarStyles["wrapper"]}>
-          <div>
+          <a href={"/"} className={`${navbarStyles.siteName}`}>
+            hà huy long hải
+          </a>
+          <div className={`${navbarStyles.menuWrapper}`}>
             <a
-              href={"/"}
-              style={{ color: "var(--text-color)", fontWeight: "600" }}
+              className={`${navbarStyles.menuItemSecondary} ${navbarStyles.menuItemLink}`}
+              href="#"
             >
-              hà huy long hải
+              blog
             </a>
-          </div>
-          <div>
-            <ul>
-              <li
-                className={`${navbarStyles.menuItem} ${navbarStyles.desktop}`}
-              >
-                <a className={`${navbarStyles.menuItemCurrent}`} href="#">
-                  blog
-                </a>
-              </li>
-              <li
-                className={`${navbarStyles.menuItem} ${navbarStyles.desktop}`}
-              >
-                <a className={`${navbarStyles.menuItemSecondary}`} href="#">
-                  about
-                </a>
-              </li>
-              <li
-                className={`${navbarStyles.menuItem} ${navbarStyles.desktop}`}
-              >
-                <a
-                  style={{ cursor: "pointer" }}
-                  onClick={this.props.themeToggle}
-                  className={`${navbarStyles.menuItemSecondary}`}
-                >
-                  toggleTheme
-                </a>
-              </li>
-              <li className={(navbarStyles.menuItem, navbarStyles.mobile)}>
-                <img
-                  style={{
-                    cursor: "pointer",
-                    position: "relative",
-                    top: "5px",
-                  }}
-                  onClick={this.props.themeToggle}
-                  src={MenuIcon}
-                  height={"24"}
-                  width={"24"}
-                  alt={"Open menu"}
-                ></img>
-              </li>
-            </ul>
+            <a
+              className={`${navbarStyles.menuItemSecondary} ${navbarStyles.menuItemLink}`}
+              href="#"
+            >
+              about
+            </a>
+            {/* <a
+              style={{ cursor: "pointer" }}
+              onClick={this.props.themeToggle}
+              className={`${navbarStyles.menuItemSecondary} ${navbarStyles.menuItemLink}`}
+            >
+              toggleTheme
+            </a> */}
+            <a
+              href="https://github.com/wonrax"
+              target="_blank"
+              className={`${navbarStyles.menuItemSecondary} ${navbarStyles.menuItemLink}`}
+            >
+              github
+            </a>
+            <img
+              className={`${navbarStyles.mobile}`}
+              style={{
+                cursor: "pointer",
+                position: "relative",
+                top: "5px",
+              }}
+              onClick={this.props.themeToggle}
+              src={MenuIcon}
+              height={"24"}
+              width={"24"}
+              alt={"Open menu"}
+            ></img>
           </div>
         </div>
       </nav>
