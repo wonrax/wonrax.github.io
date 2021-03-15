@@ -80,14 +80,18 @@
 .overlay {
     display: none;
 }
-
-/* .menuMobileDisabled {
-    display: unset;
+  
+@keyframes menuItemSlide {
+    from {
+        color:rgba(0, 0, 0, 0.205);
+        padding: 8px 16px;
+    }
+  
+    to {
+        padding: 16px;
+        color: var(--text-color);
+    }
 }
-
-.menuMobileEnabled {
-    display: unset;
-} */
 
 @media only screen and (max-width: 632px) {
     .wrapper {
@@ -102,6 +106,7 @@
         align-items: flex-end;
         right: 0;
         top: calc((var(--nav-height) + var(--nav-height-shrink))/2);
+        height: unset;
     }
 
     .menuMobileDisabled {
@@ -113,10 +118,11 @@
     }
 
     .menuItemLink {
-        padding: 16px;
         font-size: 20px;
         font-weight: 600;
         z-index: 1000;
+        animation: menuItemSlide 0.1s ease;
+        padding: 16px;
     }
 
     .mobile {
