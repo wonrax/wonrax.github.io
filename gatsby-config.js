@@ -35,6 +35,9 @@ module.exports = {
               showCaptions: true,
             },
           },
+          {
+            resolve: require.resolve("./plugins/gatsby-remark-unwrap-p-tags"),
+          },
         ],
       },
     },
