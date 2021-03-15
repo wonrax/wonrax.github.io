@@ -42,10 +42,10 @@ class Caption extends React.Component {
   }
 }
 
-class Link extends React.Component {
-  render() {
-    return
-  }
-}
+// class Link extends React.Component {
+//   render() {
+//     return
+//   }
+// }
 
 export { Heading, Paragraph, Caption }

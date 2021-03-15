@@ -1,12 +1,12 @@
 import React from "react"
-import { Heading } from "../Typography"
+// import { Heading } from "../Typography"
 import navbarStyles from "./Navbar.module.css"
 import MenuIcon from "../Icons/Menu.svg"
 
 class Navbar extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { shrink: false }
+    this.state = { shrink: false, menuExpanded: false }
   }
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll)
@@ -24,6 +24,10 @@ class Navbar extends React.Component {
     }
   }.bind(this)
 
+  menuExpand = function (event) {
+    this.setState({ menuExpanded: !this.state.menuExpanded })
+  }.bind(this)
+
   render() {
     return (
       <nav
@@ -35,16 +39,33 @@ class Navbar extends React.Component {
           <a href={"/"} className={`${navbarStyles.siteName}`}>
             hà huy long hải
           </a>
-          <div className={`${navbarStyles.menuWrapper}`}>
+          <button
+            className={`${navbarStyles.mobile}`}
+            onClick={this.menuExpand}
+          >
+            <img
+              src={MenuIcon}
+              height={"24"}
+              width={"24"}
+              alt={"Open menu"}
+            ></img>
+          </button>
+          <div
+            className={`${navbarStyles.menuWrapper} ${
+              this.state.menuExpanded
+                ? navbarStyles.menuMobileEnabled
+                : navbarStyles.menuMobileDisabled
+            }`}
+          >
             <a
               className={`${navbarStyles.menuItemSecondary} ${navbarStyles.menuItemLink}`}
-              href="#"
+              href="/blog"
             >
               blog
             </a>
             <a
               className={`${navbarStyles.menuItemSecondary} ${navbarStyles.menuItemLink}`}
-              href="#"
+              href="/about"
             >
               about
             </a>
@@ -58,25 +79,21 @@ class Navbar extends React.Component {
             <a
               href="https://github.com/wonrax"
               target="_blank"
+              rel="noreferrer"
               className={`${navbarStyles.menuItemSecondary} ${navbarStyles.menuItemLink}`}
             >
               github
             </a>
-            <img
-              className={`${navbarStyles.mobile}`}
-              style={{
-                cursor: "pointer",
-                position: "relative",
-                top: "5px",
-              }}
-              onClick={this.props.themeToggle}
-              src={MenuIcon}
-              height={"24"}
-              width={"24"}
-              alt={"Open menu"}
-            ></img>
           </div>
         </div>
+        <div
+          onClick={this.menuExpand}
+          className={`${navbarStyles.overlay} ${
+            this.state.menuExpanded
+              ? navbarStyles.menuMobileEnabled
+              : navbarStyles.menuMobileDisabled
+          }`}
+        ></div>
       </nav>
     )
   }
