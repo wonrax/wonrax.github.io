@@ -159,3 +159,16 @@ h5 {
 :global .gatsby-resp-image-wrapper  {
     margin: 32px 0;
 }
+
+:global .gatsby-resp-image-figcaption {
+    font-size: 14px;
+    margin-top: -16px;
+    text-align: center;
+    color: var(--text-secondary-color);
+    line-height: 140%;
+    margin-bottom: 16px;
+}
+
+:global .gatsby-resp-image-figure {
+    margin: 32px 0;
+}

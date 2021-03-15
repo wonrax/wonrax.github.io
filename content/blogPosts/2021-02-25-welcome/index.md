@@ -6,7 +6,7 @@ excerpt: "Et id eum voluptas iste qui laudantium. Accusantium qui id voluptatem 
 --- 
 Morbi quis turpis eu mauris ultricies convallis vel venenatis risus. Maecenas posuere pretium ex quis ullamcorper. Ut ultricies ac ligula ac vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra urna sapien, sit amet gravida ligula pharetra nec. Suspendisse sit amet aliquet felis.
 
-![Sample image](https://source.unsplash.com/random/300x0)
+![Figure 1: Phasellus semper, justo lobortis ullamcorper commodo, lacus diam hendrerit massa, eget laoreet enim ex vel metus](./windows.jpg)
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis volutpat faucibus. Morbi dignissim varius magna, vitae egestas velit maximus quis. Morbi nisl dui, rutrum sollicitudin dictum sed, fermentum a arcu. Vivamus luctus fringilla est, id consectetur nunc sodales et. Ut ante velit, auctor sed accumsan in, iaculis eget augue. Cras id suscipit ante. Pellentesque commodo nisl id ligula viverra, at lacinia augue dapibus. Donec molestie ac nunc ut pretium. Sed id dolor massa. Phasellus sit amet suscipit lacus, porttitor finibus metus. Maecenas commodo faucibus orci eu feugiat. In cursus velit eu lorem vehicula semper. Integer finibus, nisi a aliquam porta, massa enim aliquam ante, eget molestie lacus magna quis eros. Aenean elementum nulla ut turpis gravida, et tempor metus sollicitudin.
 
