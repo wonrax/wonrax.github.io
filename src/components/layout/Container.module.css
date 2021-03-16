@@ -172,3 +172,7 @@ h5 {
 :global .gatsby-resp-image-figure {
     margin: 32px 0;
 }
+
+:global .gatsby-resp-image-image {
+    width: 100%;
+}

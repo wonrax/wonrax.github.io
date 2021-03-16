@@ -2,6 +2,7 @@ import React from "react"
 // import { Heading } from "../Typography"
 import navbarStyles from "./Navbar.module.css"
 import MenuIcon from "../Icons/Menu.svg"
+import MenuClose from "../Icons/CloseMenu.svg"
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -44,7 +45,7 @@ class Navbar extends React.Component {
             onClick={this.menuExpand}
           >
             <img
-              src={MenuIcon}
+              src={this.state.menuExpanded ? MenuClose : MenuIcon}
               height={"24"}
               width={"24"}
               alt={"Open menu"}

@@ -9,16 +9,24 @@ function toFigure(url, alt) {
         <img class="gatsby-resp-image-image" alt="${alt}" src="${url}" style="max-width: 600px;">
       </a>
     </span>
+    ${
+      alt
+        ? `<figcaption class="gatsby-resp-image-figcaption">${alt}</figcaption>`
+        : ""
+    }
 </figure>`
 }
 
 module.exports = ({ markdownAST }) => {
   visit(markdownAST, `paragraph`, (node, index, parent) => {
     const hasOnlyImagesNodes = node.children.every(child => {
+      // If image is from external link
       if (child.type === "image") {
         child["value"] = toFigure(child["url"], child["alt"])
         child["type"] = "html"
       }
+
+      // If contains only image return true
       return (
         (child.type === "html" && child.url && child.alt) ||
         child.type === "image"
@@ -29,12 +37,11 @@ module.exports = ({ markdownAST }) => {
       return
     }
 
+    // Idk what this does
     remove(node, "text")
-    parent.children.splice(index, 1, ...node.children)
 
-    console.log(
-      util.inspect(parent.children, false, null, true /* enable colors */)
-    )
+    // remove the paragraph node and replace it with its children
+    parent.children.splice(index, 1, ...node.children)
 
     return index
   })
