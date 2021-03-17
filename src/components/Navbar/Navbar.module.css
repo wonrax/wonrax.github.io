@@ -18,7 +18,7 @@
     background-color: var(--nav-background-color);
     border-bottom: 1px solid var(--background-secondary-color);
     
-    box-shadow: 0 2px 3px rgba(0, 55, 255, 0.05);
+    box-shadow: 0 1px 2px rgba(0, 55, 255, 0.03);
     
     /* border-bottom: 1px solid;
     border-image-slice: 1;
@@ -61,7 +61,7 @@
 }
 
 .menuItemSecondary {
-    color: var(--text-color);
+    color: var(--text-secondary-color);
 }
 
 .menuItemSecondary:hover {
@@ -124,7 +124,10 @@
         animation: menuItemSlide 0.1s ease;
         padding: 16px;
     }
-
+    
+    .mobile:focus {
+        outline: initial;
+    }
     .mobile {
         display: unset;
         /* height: 100%; */
@@ -132,6 +135,7 @@
         outline: none;
         z-index: 1000;
     }
+
 
     .overlay {
         position: absolute;

@@ -38,7 +38,7 @@ module.exports = ({ markdownAST }) => {
     }
 
     // Idk what this does
-    remove(node, "text")
+    // remove(node, "text")
 
     // remove the paragraph node and replace it with its children
     parent.children.splice(index, 1, ...node.children)

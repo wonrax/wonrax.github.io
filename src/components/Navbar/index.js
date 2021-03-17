@@ -89,6 +89,8 @@ class Navbar extends React.Component {
         </div>
         <div
           onClick={this.menuExpand}
+          onKeyDown={this.menuExpand}
+          aria-hidden="true"
           className={`${navbarStyles.overlay} ${
             this.state.menuExpanded
               ? navbarStyles.menuMobileEnabled

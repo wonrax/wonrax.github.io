@@ -3,8 +3,11 @@
     --text-color-tinted: #001052;
     --text-secondary-color: #808080;
     --background-color: white;
-    --nav-background-color: #fafafafc;
+    --nav-background-color: #fffffffc;
+    
+    /* nav borderbottom */
     --background-secondary-color: #d4d4d4;
+    
     --primary-tint-color: #eff2ff;
     --primary-tinter-color: #8ea6ff;
 }
