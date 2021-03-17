@@ -80,7 +80,7 @@ button {
     background-color: var(--background-color);
     --primary-color: #0066ff;
     --nav-height: 128px;
-    --nav-height-shrink: 40px;
+    --nav-height-shrink: 48px;
 
     /* prevent gap in the bottom */
     overflow: auto;

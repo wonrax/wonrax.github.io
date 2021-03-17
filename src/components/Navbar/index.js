@@ -75,7 +75,7 @@ class Navbar extends React.Component {
               onClick={this.props.themeToggle}
               className={`${navbarStyles.menuItemSecondary} ${navbarStyles.menuItemLink}`}
             >
-              toggleTheme
+            toggleTheme
             </a> */}
             <a
               href="https://github.com/wonrax"
@@ -85,6 +85,17 @@ class Navbar extends React.Component {
             >
               github
             </a>
+            <p
+              style={{
+                zIndex: 1000,
+                color: "var(--text-secondary-color)",
+                fontSize: "14px",
+                margin: "32px 16px 0 0",
+              }}
+              className={navbarStyles.mobileOnly}
+            >
+              Tap anywhere else to close the menu.
+            </p>
           </div>
         </div>
         <div

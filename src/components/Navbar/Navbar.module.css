@@ -77,6 +77,10 @@
     display: none;
 }
 
+.mobileOnly {
+    display: none;
+}
+
 .overlay {
     display: none;
 }
@@ -89,7 +93,7 @@
   
     to {
         padding: 16px;
-        color: var(--text-color);
+        color: var(--text-secondary-color);
     }
 }
 
@@ -97,6 +101,10 @@
     .wrapper {
         width: auto;
         padding: 0 16px;
+    }
+
+    .mobileOnly {
+        display: unset;
     }
 
     .menuWrapper {
@@ -123,6 +131,7 @@
         z-index: 1000;
         animation: menuItemSlide 0.1s ease;
         padding: 16px;
+        color: var(--text-color);
     }
     
     .mobile:focus {
@@ -130,8 +139,8 @@
     }
     .mobile {
         display: unset;
-        /* height: 100%; */
-        padding: 16px 0 16px 16px;
+        height: 100%;
+        /* padding: 16px 0 16px 16px; */
         outline: none;
         z-index: 1000;
     }
