@@ -127,14 +127,18 @@ h5 {
     letter-spacing: 0.6px;
 }
 
-.navBar {
+/* sticking navbar */
+/* .navBar {
     position: fixed;
     width: 100%;
     z-index: 99;
-}
+} */
 
 .content {
-    padding-top: var(--nav-height);
+    /* enable this if want sticking navbar */
+    /* padding-top: var(--nav-height); */
+
+
     /* position: relative;
     height: 100%;
     margin: 0 auto;

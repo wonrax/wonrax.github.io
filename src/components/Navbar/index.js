@@ -10,11 +10,13 @@ class Navbar extends React.Component {
     this.state = { shrink: false, menuExpanded: false }
   }
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll)
+    // sticking navbar height change when scroll
+    // window.addEventListener("scroll", this.handleScroll)
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll)
+    // sticking navbar height change when scroll
+    // window.removeEventListener("scroll", this.handleScroll)
   }
 
   handleScroll = function (event) {
