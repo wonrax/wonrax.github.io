@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Reading, Paragraph, Heading } from "../../components"
+import { Container, Reading, Caption } from "../../components"
 import PostCard from "../../components/PostCard"
 import { graphql } from "gatsby"
 
@@ -10,13 +10,16 @@ export default function Blog({ data: { allMdx } }) {
         title={edge.node.frontmatter.title}
         excerpt={edge.node.frontmatter.excerpt}
         publishedDate={edge.node.frontmatter.date}
+        url={edge.node.fields.slug}
       ></PostCard>
     )
   })
   return (
     <Container>
       <Reading>
-        <Heading weight={2}>blog posts</Heading>
+        <Caption mb="mb32" align="center">
+          blog posts
+        </Caption>
         {blogPosts}
       </Reading>
     </Container>
@@ -34,6 +37,9 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
           }
           id
+          fields {
+            slug
+          }
         }
       }
     }

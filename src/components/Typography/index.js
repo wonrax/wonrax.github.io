@@ -9,10 +9,17 @@ class Heading extends React.Component {
     // const classnames = `${this.props.mb ? spacingStyles[this.props.mb] : ""} ${
     //   this.props.mt ? spacingStyles[this.props.mt] : ""
     // }`
+
+    let align = null
+    if (this.props.align === "center") {
+      align = spacingStyles.textAlignCenter
+    }
+
     const className = classnames(
       this.props.mb && spacingStyles[this.props.mb],
       this.props.mt && spacingStyles[this.props.mt],
-      this.props.color ? colorsStyles[this.props.color] : colorsStyles.gray0
+      this.props.color ? colorsStyles[this.props.color] : colorsStyles.gray0,
+      align
     )
     switch (this.props.weight) {
       case 1:
@@ -46,10 +53,15 @@ class Paragraph extends React.Component {
 
 class Caption extends React.Component {
   render() {
+    let align = null
+    if (this.props.align === "center") {
+      align = spacingStyles.textAlignCenter
+    }
     const className = classnames(
       this.props.color ? colorsStyles[this.props.color] : colorsStyles.gray0,
       typographyStyles.caption,
-      this.props.mb && spacingStyles[this.props.mb]
+      this.props.mb && spacingStyles[this.props.mb],
+      align
     )
     return <p className={className}>{this.props.children}</p>
   }
