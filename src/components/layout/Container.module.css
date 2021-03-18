@@ -78,22 +78,11 @@ button {
     -moz-osx-font-smoothing: grayscale;
     color: var(--text-color);
     background-color: var(--background-color);
-    --primary-color: #0066ff;
     --nav-height: 128px;
     --nav-height-shrink: 48px;
 
     /* prevent gap in the bottom */
     overflow: auto;
-}
-
-.themeLight {
-    composes: themeLight from "../Colors/Colors.module.css";
-    transition: all 0.2s linear;
-}
-
-.themeDark {
-    composes: themeDark from "../Colors/Colors.module.css";
-    transition: all 0.2s linear;
 }
 
 h1 {
@@ -145,14 +134,6 @@ h5 {
     min-height: calc(100vh - var(--nav-height));
     top: var(--nav-height);
     background-color: var(--background-color); */
-}
-
-:global .primaryColor {
-    color: var(--primary-color);
-}
-
-:global .textColorSecondary {
-    color: var(--text-secondary-color);
 }
 
 :global .gatsby-resp-image-wrapper  {

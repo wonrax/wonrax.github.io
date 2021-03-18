@@ -11,18 +11,14 @@ export default function Template({
   return (
     <Container>
       <Reading>
-        <Heading
-          style={{ color: "var(--text-color-tinted)" }}
-          weight={3}
-          mb="mb16"
-        >
+        <Heading color="primaryColor30" weight={3} mb="mb16">
           {mdx.frontmatter.title}
         </Heading>
-        <Paragraph lh={"lh170"} mb="mb16" color={"textColorSecondary"}>
+        <Paragraph lh="lh170" mb="mb16" color="gray50">
           {mdx.frontmatter.excerpt}
         </Paragraph>
         <Caption
-          color={"primary-color"}
+          color="primaryColor"
           mb="mb32"
         >{`Published ${mdx.frontmatter.date}`}</Caption>
         <MDXProvider components={shortcodes}>

@@ -72,13 +72,13 @@ class Navbar extends React.Component {
             >
               about
             </a>
-            {/* <a
+            <a
               style={{ cursor: "pointer" }}
               onClick={this.props.themeToggle}
               className={`${navbarStyles.menuItemSecondary} ${navbarStyles.menuItemLink}`}
             >
-            toggleTheme
-            </a> */}
+              toggleTheme
+            </a>
             <a
               href="https://github.com/wonrax"
               target="_blank"
