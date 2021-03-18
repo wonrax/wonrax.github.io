@@ -108,7 +108,7 @@
     }
 
     .menuWrapper {
-        position: absolute;
+        position: fixed;
         /* display: none; */
         flex-direction: column;
         align-items: flex-end;
@@ -119,6 +119,7 @@
         top: var(--nav-height);
 
         height: unset;
+        z-index: 1000;
     }
 
     .menuMobileDisabled {
@@ -151,7 +152,7 @@
 
 
     .overlay {
-        position: absolute;
+        position: fixed;
         top: 0;
         background: rgb(255,255,255);
         background: linear-gradient(270deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0.9) 100%);

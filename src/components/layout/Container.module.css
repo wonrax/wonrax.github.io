@@ -147,14 +147,6 @@ h5 {
     background-color: var(--background-color); */
 }
 
-:global .mb-16 {
-    margin-bottom: 16px;
-}
-
-:global .mb-32 {
-    margin-bottom: 32px;
-}
-
 :global .primaryColor {
     color: var(--primary-color);
 }

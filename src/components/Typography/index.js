@@ -1,9 +1,12 @@
 import React from "react"
 import typographyStyles from "./Typography.module.css"
+import spacingStyles from "../../components/layout/Spacing.module.css"
 
 class Heading extends React.Component {
   render() {
-    const classnames = `${this.props.mb || "mb-16"}`
+    const classnames = `${this.props.mb ? spacingStyles[this.props.mb] : ""} ${
+      this.props.mt ? spacingStyles[this.props.mt] : ""
+    }`
     switch (this.props.weight) {
       case 1:
         return <h1 className={classnames}>{this.props.children}</h1>
@@ -25,7 +28,9 @@ class Heading extends React.Component {
 
 class Paragraph extends React.Component {
   render() {
-    const classnames = `${this.props.mb || "mb-16"} ${this.props.color || ""} ${
+    const classnames = `${this.props.mb ? spacingStyles[this.props.mb] : ""} ${
+      this.props.color || ""
+    } ${
       this.props.lh ? typographyStyles[this.props.lh] : typographyStyles.lh170
     }`
     return <p className={classnames}>{this.props.children}</p>
@@ -35,7 +40,11 @@ class Paragraph extends React.Component {
 class Caption extends React.Component {
   render() {
     return (
-      <p className={`primaryColor ${typographyStyles.caption} mb-32`}>
+      <p
+        className={`primaryColor ${typographyStyles.caption} ${
+          this.props.mb ? spacingStyles[this.props.mb] : ""
+        }`}
+      >
         {this.props.children}
       </p>
     )
