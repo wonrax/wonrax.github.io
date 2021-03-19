@@ -7,28 +7,44 @@ import MenuClose from "../Icons/CloseMenu.svg"
 class Navbar extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { shrink: false, menuExpanded: false }
+    this.state = {
+      // shrink: false,
+      menuExpanded: false,
+      wrongTap: false,
+    }
   }
-  componentDidMount() {
-    // sticking navbar height change when scroll
-    // window.addEventListener("scroll", this.handleScroll)
-  }
+  // componentDidMount() {
+  //   // sticking navbar height change when scroll
+  //   // window.addEventListener("scroll", this.handleScroll)
+  // }
 
   componentWillUnmount() {
     // sticking navbar height change when scroll
     // window.removeEventListener("scroll", this.handleScroll)
+    if (this.wrongTapMessageTimeOut) {
+      clearTimeout(this.wrongTapMessageTimeOut)
+    }
   }
 
-  handleScroll = function (event) {
-    if (window.scrollY > 0) {
-      this.setState({ shrink: true })
-    } else {
-      this.setState({ shrink: false })
-    }
-  }.bind(this)
+  // handleScroll = function (event) {
+  //   if (window.scrollY > 0) {
+  //     this.setState({ shrink: true })
+  //   } else {
+  //     this.setState({ shrink: false })
+  //   }
+  // }.bind(this)
 
   menuExpand = function (event) {
     this.setState({ menuExpanded: !this.state.menuExpanded })
+  }.bind(this)
+
+  handleWrongCloseTap = function (event) {
+    if (!this.state.wrongTap) {
+      this.setState({ wrongTap: !this.state.wrongTap })
+      this.wrongTapMessageTimeOut = setTimeout(() => {
+        this.setState({ wrongTap: false })
+      }, 2000)
+    }
   }.bind(this)
 
   render() {
@@ -54,6 +70,8 @@ class Navbar extends React.Component {
             ></img>
           </button>
           <div
+            aria-hidden="true"
+            onClick={this.handleWrongCloseTap}
             className={`${navbarStyles.menuWrapper} ${
               this.state.menuExpanded
                 ? navbarStyles.menuMobileEnabled
@@ -96,13 +114,14 @@ class Navbar extends React.Component {
               }}
               className={navbarStyles.mobileOnly}
             >
-              Tap anywhere else to close the menu.
+              {!this.state.wrongTap
+                ? "Tap anywhere else to close the menu."
+                : "Not there bro..."}
             </p>
           </div>
         </div>
         <div
           onClick={this.menuExpand}
-          onKeyDown={this.menuExpand}
           aria-hidden="true"
           className={`${navbarStyles.overlay} ${
             this.state.menuExpanded

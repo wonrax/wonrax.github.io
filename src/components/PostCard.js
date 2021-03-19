@@ -12,7 +12,9 @@ const PostCard = props => {
         <Heading weight={4} mb="mb16">
           {props.title}
         </Heading>
-        <Paragraph mb="mb16">{props.excerpt}</Paragraph>
+        <Paragraph mb="mb16" lh="lh150" color="gray50">
+          {props.excerpt}
+        </Paragraph>
         <Caption color="primaryColor">{props.publishedDate}</Caption>
       </div>
     </a>

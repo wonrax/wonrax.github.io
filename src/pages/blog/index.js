@@ -7,6 +7,7 @@ export default function Blog({ data: { allMdx } }) {
   const blogPosts = allMdx.edges.map(edge => {
     return (
       <PostCard
+        key={edge.node.id}
         title={edge.node.frontmatter.title}
         excerpt={edge.node.frontmatter.excerpt}
         publishedDate={edge.node.frontmatter.date}
