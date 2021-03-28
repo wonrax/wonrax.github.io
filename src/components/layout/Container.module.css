@@ -70,55 +70,10 @@ button {
 :root {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 400;
-    font-size: 18px;
+    font-size: var(--text-readable-font-size);
     color: var(--text-color);
     background-color: var(--background-color);
 
-}
-
-.container {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    width: 100%;
-    min-height: 100vh;
-    height: 100%;
-    --nav-height: 128px;
-    --nav-height-shrink: 48px;
-
-    /* prevent gap in the bottom */
-    overflow: auto;
-}
-
-h1 {
-    font-weight: 300;
-    font-size: 72px;
-    letter-spacing: -1px;
-}
-
-h2 {
-    font-weight: 400;
-    font-size: 48px;
-    letter-spacing: -0.6px;
-}
-
-h3 {
-    font-weight: 600;
-    font-size: 36px;
-    letter-spacing: -1.2px;
-    line-height: 120%;
-}
-
-h4 {
-    font-weight: 700;
-    font-size: 24px;
-    letter-spacing: -0.2px;
-    line-height: 120%;
-}
-
-h5 {
-    font-weight: 700;
-    font-size: 20px;
-    letter-spacing: 0.6px;
 }
 
 /* sticking navbar */
@@ -160,4 +115,15 @@ h5 {
 
 :global .gatsby-resp-image-image {
     width: 100%;
+}
+
+
+.container {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    /* prevent gap in the bottom */
+    overflow: auto;
 }

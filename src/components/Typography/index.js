@@ -15,28 +15,16 @@ class Heading extends React.Component {
       align = spacingStyles.textAlignCenter
     }
 
+    const headingLevel = typographyStyles["heading" + this.props.weight]
+
     const className = classnames(
       this.props.mb && spacingStyles[this.props.mb],
       this.props.mt && spacingStyles[this.props.mt],
       this.props.color ? colorsStyles[this.props.color] : colorsStyles.gray0,
-      align
+      align,
+      headingLevel
     )
-    switch (this.props.weight) {
-      case 1:
-        return <h1 className={className}>{this.props.children}</h1>
-      case 2:
-        return <h2 className={className}>{this.props.children}</h2>
-      case 3:
-        return <h3 className={className}>{this.props.children}</h3>
-      case 4:
-        return <h4 className={className}>{this.props.children}</h4>
-      case 5:
-        return <h5 className={className}>{this.props.children}</h5>
-      case 6:
-        return <h6 className={className}>{this.props.children}</h6>
-      default:
-        return <h1 className={className}>{this.props.children}</h1>
-    }
+    return <span className={className}>{this.props.children}</span>
   }
 }
 

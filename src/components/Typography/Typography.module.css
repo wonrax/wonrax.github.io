@@ -1,8 +1,57 @@
+:root {
+    --text-normal-font-size: 16px;
+    --text-readable-font-size: 18px;
+    --text-large-font-size: 20px;
+    
+    /* Used for captions, description texts */
+    --text-small-font-size: 14px;
+}
+
+.heading1 {
+    font-weight: 300;
+    font-size: 72px;
+    letter-spacing: -1px;
+}
+
+.heading2 {
+    font-weight: 400;
+    font-size: 48px;
+    letter-spacing: -0.6px;
+}
+
+.heading3 {
+    font-weight: 600;
+    font-size: 36px;
+    letter-spacing: -1.2px;
+    line-height: 120%;
+}
+
+.heading4 {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.2px;
+    line-height: 120%;
+}
+
+.heading5 {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.6px;
+}
+
+.heading6 {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.6px;
+}
+
+/* @media */
+
 .caption {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.5px;
-    font-size: 14px;
+    font-size: var(--text-small-font-size);
 }
 
 .lh170 {

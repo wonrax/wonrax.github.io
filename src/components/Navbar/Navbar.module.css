@@ -1,3 +1,8 @@
+:root {
+    --nav-height: 128px;
+    --nav-height-shrink: 48px;
+}
+
 .navbar {
     height: var(--nav-height);
     /* line-height: var(--nav-height); */
