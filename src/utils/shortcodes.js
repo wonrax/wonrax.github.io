@@ -1,5 +1,5 @@
 import React from "react"
-import { Heading, Paragraph } from "../components/Typography"
+import { Heading, Paragraph, Box } from "../components"
 
 // Convert markdown tags to components
 const commonHeadingClassnames = {
@@ -8,34 +8,46 @@ const commonHeadingClassnames = {
 }
 export const shortcodes = {
   h1: props => (
-    <Heading weight={4} {...commonHeadingClassnames}>
-      {props.children}
-    </Heading>
+    <Box {...commonHeadingClassnames}>
+      <Heading weight={4}>
+        {props.children}
+      </Heading>
+    </Box>
   ),
   h2: props => (
-    <Heading weight={5} {...commonHeadingClassnames}>
-      {props.children}
-    </Heading>
+    <Box {...commonHeadingClassnames}>
+      <Heading weight={5}>
+        {props.children}
+      </Heading>
+    </Box>
   ),
   h3: props => (
-    <Heading weight={6} {...commonHeadingClassnames}>
-      {props.children}
-    </Heading>
+    <Box {...commonHeadingClassnames}>
+      <Heading weight={6}>
+        {props.children}
+      </Heading>
+    </Box>
   ),
   h4: props => (
-    <Heading weight={6} {...commonHeadingClassnames}>
-      {props.children}
-    </Heading>
+    <Box {...commonHeadingClassnames}>
+      <Heading weight={6}>
+        {props.children}
+      </Heading>
+    </Box>
   ),
   h5: props => (
-    <Heading weight={6} {...commonHeadingClassnames}>
-      {props.children}
-    </Heading>
+    <Box {...commonHeadingClassnames}>
+      <Heading weight={6}>
+        {props.children}
+      </Heading>
+    </Box>
   ),
   h6: props => (
-    <Heading weight={6} {...commonHeadingClassnames}>
-      {props.children}
-    </Heading>
+    <Box {...commonHeadingClassnames}>
+      <Heading weight={6}>
+        {props.children}
+      </Heading>
+    </Box>
   ),
   p: props => (
     <Paragraph lh={"lh170"} mb="mb16">

@@ -1,6 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Container, Reading, Heading, Paragraph, Caption } from "../components"
+import {
+  Container,
+  Reading,
+  Heading,
+  Paragraph,
+  Caption,
+  Box,
+} from "../components"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { shortcodes } from "../utils/shortcodes"
@@ -11,9 +18,11 @@ export default function Template({
   return (
     <Container>
       <Reading>
-        <Heading color="primaryColor30" weight={3} mb="mb16">
-          {mdx.frontmatter.title}
-        </Heading>
+        <Box mb="mb16">
+          <Heading color="primaryColor30" weight={3}>
+            {mdx.frontmatter.title}
+          </Heading>
+        </Box>
         <Paragraph lh="lh170" mb="mb16" color="gray50">
           {mdx.frontmatter.excerpt}
         </Paragraph>

@@ -1,6 +1,5 @@
 import React from "react"
-import { Container, Reading, Caption } from "../../components"
-import PostCard from "../../components/PostCard"
+import { Container, Reading, Caption, PostCard } from "../../components"
 import { graphql } from "gatsby"
 
 export default function Blog({ data: { allMdx } }) {

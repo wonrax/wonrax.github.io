@@ -1,3 +1,5 @@
 export * from "./Typography"
 export * from "./layout/Container"
 export * from "./layout/Reading"
+export { PostCard } from "./PostCard"
+export { Box } from "./Box"
