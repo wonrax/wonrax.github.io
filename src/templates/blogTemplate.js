@@ -23,13 +23,19 @@ export default function Template({
             {mdx.frontmatter.title}
           </Heading>
         </Box>
-        <Paragraph lh="lh170" mb="mb16" color="gray50">
-          {mdx.frontmatter.excerpt}
-        </Paragraph>
-        <Caption
-          color="primaryColor"
-          mb="mb32"
-        >{`Published ${mdx.frontmatter.date}`}</Caption>
+
+        <Box mb="mb16">
+          <Paragraph lh="lh170" mb="mb16" color="gray50">
+            {mdx.frontmatter.excerpt}
+          </Paragraph>
+        </Box>
+
+        <Box mb="mb32">
+          <Caption
+            color="primaryColor"
+            mb="mb32"
+          >{`Published ${mdx.frontmatter.date}`}</Caption>
+        </Box>
         <MDXProvider components={shortcodes}>
           <MDXRenderer className="blog-post-content">{mdx.body}</MDXRenderer>
         </MDXProvider>
