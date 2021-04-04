@@ -1,34 +1,12 @@
 :root {
     --nav-height: 128px;
-    --nav-height-shrink: 48px;
 }
 
 .navbar {
     height: var(--nav-height);
-    /* line-height: var(--nav-height); */
-    /* -webkit-transition: all 0.35s ease;
-    -moz-transition: all 0.35s ease;
-    -o-transition: all 0.35s ease; */
     transition: height 0.35s ease, line-height 0.35s ease;
     background-color: var(--background-color);
     z-index: 1;
-}
-
-.navbarShrink {
-    height: var(--nav-height-shrink);
-    /* line-height: var(--nav-height-shrink); */
-    /* -webkit-transition: all 0.35s ease;
-    -moz-transition: all 0.35s ease;
-    -o-transition: all 0.35s ease; */
-    background-color: var(--nav-background-color);
-    border-bottom: 1px solid var(--background-secondary-color);
-    
-    box-shadow: 0 1px 2px rgba(0, 55, 255, 0.03);
-    
-    /* border-bottom: 1px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to right, #bbbbbb, #dddddd); */
-    transition: height 0.35s ease, line-height 0.35s ease;
 }
 
 .wrapper {
@@ -63,18 +41,10 @@
     font-size: 16px;
     font-weight: 400;
     height: 100%;
+    color: var(--text-color);
 }
 
-.menuItemSecondary {
-    color: var(--text-secondary-color);
-}
-
-.menuItemSecondary:hover {
-    color: var(--primary-color);
-}
-
-.menuItemCurrent {
-    /* font-weight: 600; */
+.menuItemLink:hover {
     color: var(--primary-color);
 }
 
@@ -108,49 +78,56 @@
         padding: 0 16px;
     }
 
-    .mobileOnly {
+    .menuMobileEnabled .mobileOnly {
         display: unset;
     }
 
     .menuWrapper {
         position: fixed;
-        /* display: none; */
         flex-direction: column;
         align-items: flex-end;
         right: 0;
-
-        /* reenable this if want sticking navbar */
-        /* top: calc((var(--nav-height) + var(--nav-height-shrink))/2); */
         top: var(--nav-height);
-
         height: unset;
-        z-index: 1000;
+        z-index: 4;
     }
-
-    .menuMobileDisabled {
-        display: none;
-    }
-
     .menuMobileEnabled {
         display: flex;
+        transition: all 110ms cubic-bezier(.2,0,.38,.9);
+    }
+    
+    .menuMobileEnabled .menuItemLink {
+        display: block;
     }
 
     .menuItemLink {
+        display: none;
         font-size: 20px;
         font-weight: 600;
         z-index: 1000;
-        animation: menuItemSlide 0.1s ease;
         padding: 16px;
         color: var(--text-color);
     }
+
+    .expanding {
+        animation-name: menuItemSlide;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-out;
+    }
     
+    .collapsing {
+        animation-name: menuItemSlide;
+        animation-duration: 0.1s;
+        animation-timing-function: ease-in;
+        animation-direction: reverse;
+    }
+
     .mobile:focus {
         outline: initial;
     }
     .mobile {
         display: unset;
         height: 100%;
-        /* padding: 16px 0 16px 16px; */
         outline: none;
         z-index: 1000;
     }
@@ -164,6 +141,6 @@
         width: 100vw;
         height: 100vh;
         overflow-y: hidden;
-        z-index: 999;
+        z-index: 3;
     }
 }

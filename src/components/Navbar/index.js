@@ -1,41 +1,45 @@
 import React from "react"
-// import { Heading } from "../Typography"
 import navbarStyles from "./Navbar.module.css"
 import MenuIcon from "../Icons/Menu.svg"
 import MenuClose from "../Icons/CloseMenu.svg"
+import classnames from "classnames"
 
 class Navbar extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      // shrink: false,
       menuExpanded: false,
+      prevExpanded: true,
       wrongTap: false,
+      animation: "",
     }
   }
-  // componentDidMount() {
-  //   // sticking navbar height change when scroll
-  //   // window.addEventListener("scroll", this.handleScroll)
-  // }
 
   componentWillUnmount() {
-    // sticking navbar height change when scroll
-    // window.removeEventListener("scroll", this.handleScroll)
     if (this.wrongTapMessageTimeOut) {
       clearTimeout(this.wrongTapMessageTimeOut)
     }
   }
 
-  // handleScroll = function (event) {
-  //   if (window.scrollY > 0) {
-  //     this.setState({ shrink: true })
-  //   } else {
-  //     this.setState({ shrink: false })
-  //   }
-  // }.bind(this)
-
+  // Only change expand menu state if it's expanding
+  // otherwise if it's collapsing, wait the animation to end
+  // then change the state (implemented in handleAnimationEnd())
   menuExpand = function (event) {
-    this.setState({ menuExpanded: !this.state.menuExpanded })
+    if (!this.state.menuExpanded) {
+      this.setState({ menuExpanded: true })
+    }
+    const prevState = !this.state.prevExpanded
+    this.setState({
+      prevExpanded: !this.state.prevExpanded,
+      animation: prevState ? "collapsing" : "expanding",
+    })
+  }.bind(this)
+
+  handleAnimationEnd = function (event) {
+    if (this.state.prevExpanded) {
+      this.setState({ menuExpanded: false })
+    }
+    this.setState({ animation: "" })
   }.bind(this)
 
   handleWrongCloseTap = function (event) {
@@ -48,6 +52,10 @@ class Navbar extends React.Component {
   }.bind(this)
 
   render() {
+    const linkItemCs = classnames(
+      navbarStyles.menuItemLink,
+      navbarStyles[this.state.animation]
+    )
     return (
       <nav
         className={
@@ -73,35 +81,24 @@ class Navbar extends React.Component {
             aria-hidden="true"
             onClick={this.handleWrongCloseTap}
             className={`${navbarStyles.menuWrapper} ${
-              this.state.menuExpanded
-                ? navbarStyles.menuMobileEnabled
-                : navbarStyles.menuMobileDisabled
+              this.state.menuExpanded && navbarStyles.menuMobileEnabled
             }`}
           >
             <a
-              className={`${navbarStyles.menuItemSecondary} ${navbarStyles.menuItemLink}`}
+              className={linkItemCs}
               href="/blog"
+              onAnimationEnd={this.handleAnimationEnd}
             >
               blog
             </a>
-            <a
-              className={`${navbarStyles.menuItemSecondary} ${navbarStyles.menuItemLink}`}
-              href="/about"
-            >
+            <a className={linkItemCs} href="/about">
               about
             </a>
-            {/* <a
-              style={{ cursor: "pointer" }}
-              onClick={this.props.themeToggle}
-              className={`${navbarStyles.menuItemSecondary} ${navbarStyles.menuItemLink}`}
-            >
-              toggleTheme
-            </a> */}
             <a
               href="https://github.com/wonrax"
               target="_blank"
               rel="noreferrer"
-              className={`${navbarStyles.menuItemSecondary} ${navbarStyles.menuItemLink}`}
+              className={linkItemCs}
             >
               github
             </a>
