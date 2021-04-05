@@ -1,7 +1,6 @@
 import React from "react"
 import navbarStyles from "./Navbar.module.css"
-import MenuIcon from "../Icons/Menu.svg"
-import MenuClose from "../Icons/CloseMenu.svg"
+import { MenuClose, MenuIcon } from "../Icons"
 import classnames from "classnames"
 
 class Navbar extends React.Component {

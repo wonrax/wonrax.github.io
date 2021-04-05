@@ -1,5 +1,5 @@
 import React from "react"
-import { Heading, Paragraph, Caption } from "."
+import { Heading, Paragraph, Caption, Box } from "."
 import postCardStyles from "./PostCard.module.css"
 import spacingStyles from "./layout/Spacing.module.css"
 
@@ -9,12 +9,14 @@ const PostCard = props => {
       <div
         className={postCardStyles.postCardWrapper + " " + spacingStyles.mb16}
       >
-        <Heading weight={4} mb="mb16">
-          {props.title}
-        </Heading>
-        <Paragraph mb="mb16" lh="lh150" color="gray50">
-          {props.excerpt}
-        </Paragraph>
+        <Box mb="mb16">
+          <Heading weight={4}>{props.title}</Heading>
+        </Box>
+        <Box mb="mb16">
+          <Paragraph lh="lh150" color="gray50">
+            {props.excerpt}
+          </Paragraph>
+        </Box>
         <Caption color="primaryColor">{props.publishedDate}</Caption>
       </div>
     </a>
